@@ -1,0 +1,18 @@
+﻿@model List<Ogrenci>
+
+    <table class="table table-striped">
+        <tr>
+        <td>Ad</td>
+        <td>Soyad</td>
+        <td>No</td>
+        </tr>
+        @foreach (var ogr in Model)
+    {
+      <tr>
+        <td>@ogr.OgrAd</td>
+        <td>@ogr.OgrSoyad</td>
+        <td>@ogr.OgrNo</td>
+        </tr>
+        
+    }
+    </table>

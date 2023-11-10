@@ -1,0 +1,75 @@
+﻿@{
+    int say = (int)TempData["sayi"];
+    int gun = (int)DateTime.Now.DayOfWeek;
+    string gun_msj = "";
+  List<string> ogrenciler  = new List<string> { "Ömer", "burhan", "Hasan", "Gül" };
+}
+@if (say > 100)
+{
+    <h2 style="color:forestgreen">sayı 100 den büyük</h2>
+}
+else if(say<100)
+{
+    <h2 style="color:red">sayı 100 den küçük</h2>
+}else{
+    <h2 style="color:blueviolet">sayı 100 e eşit</h2>
+}
+<br />
+<table border="1" width="250">
+    <tr>
+        <td>Saat</td>
+        <td>Dakika</td>
+    </tr>
+    <tr>
+        <td>@DateTime.Now.Hour</td>
+        <td>@DateTime.Now.Minute</td>
+    </tr>
+</table>
+
+<br />
+@switch (gun)
+{
+    case 1:
+        gun_msj = "Pazartesi";
+        break;
+    case 2:
+        gun_msj = "Salı";
+        break;
+    case 3:
+        gun_msj = "Çarşmnba";
+        break;
+    case 4:
+        gun_msj = "Perşembe";
+        break;
+    case 5:
+        gun_msj = "Cuma";
+        break;
+    default:
+        gun_msj = "Haftasonu";
+        break;
+}
+<h3>bugün @gun_msj</h3>
+
+<ul>
+@for (var i = 1; i < 6; i++)
+{
+    <li>@i</li>
+}
+</ul>
+<br />
+@{
+    ogrenciler.Add("Semra");
+};
+<table border="1" width="300">
+    <tr>
+        <td>No</td>
+        <td>Ad</td>
+    </tr>
+    @for(int j = 0; j < ogrenciler.Count; j++)
+    {
+        <tr>
+            <td>@(j+1)</td>
+            <td>@ogrenciler[j]</td>
+        </tr>
+    }
+</table>

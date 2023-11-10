@@ -1,0 +1,13 @@
+﻿@{
+    string viewbag_str = ViewBag.msj1;
+    string viewdata_str = ViewData["msj2"].ToString();
+    string tempdata_str = TempData["msj3"].ToString() ;
+}
+<h2>@ViewBag.msj1</h2>
+<h2>@ViewData["msj2"]</h2>
+<h2>@TempData["msj3"]</h2>
+<h2>@TempData["sayi"]</h2>
+
+<h2>@viewbag_str</h2>
+<h2>@viewdata_str</h2>
+<h2>@tempdata_str</h2>

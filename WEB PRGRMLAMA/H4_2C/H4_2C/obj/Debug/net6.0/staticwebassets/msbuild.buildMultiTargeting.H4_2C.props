@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\H4_2C.props" />
+</Project>
